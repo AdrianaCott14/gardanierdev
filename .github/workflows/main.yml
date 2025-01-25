@@ -24,4 +24,4 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://$S3_BUCKET_NAME --delete --exact-timestamps
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete --exact-timestamps
